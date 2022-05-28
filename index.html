@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=sdf, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!--Шапка сайта-->
-    <header class="heder">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=sdf, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <!--Шапка сайта-->
+  <header class="heder">
+    <div class="container heder-container">
+      <a class="heder-logo link" href="/"><span class="heder-logo-accent">Web</span>Studio</a>
       <nav class="heder-nav">
-        <a class="heder-logo link" href="/"><span class="heder-logo-accent">Web</span>Studio</a>
         <ul class="heder-list list">
-          <li class="heder-item"><a class="heder-link link current" href="./index.html">Студия</a></li>
+          <li class="heder-item">
+            <a class="heder-link link current" href="./index.html">Студия</a>
+          </li>
           <li class="heder-item">
             <a class="heder-link link" href="./portfolio.html">Портфолио</a>
           </li>
@@ -34,20 +40,23 @@
           <a class="heder-mailto link" href="mailto:info@devstudio.com">info@devstudio.com</a>
         </li>
       </ul>
-    </header>
-    <main>
-      <!--Герой-->
-      <section class="hero">
-        <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button type="button" class="hero-btn">Заказать услугу</button>
-      </section>
-      <!--Преимущества-->
-      <section class="benefits">
-        <h2 class="visually-hidden" >Наши преимущества</h2>
+    </div>
+  </header>
+  <main>
+    <!--Герой-->
+    <section class="hero">
+      <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
+      <button type="button" class="hero-btn">Заказать услугу</button>
+    </section>
+    <!--Преимущества-->
+    <section class="benefits">
+      <div class="container">
+        <h2 class="visually-hidden">Наши преимущества</h2>
         <ul class="benefits-list list">
           <li class="benefits-item">
             <h3 class="benefits-title">Внимание к деталям</h3>
-            <p class="benefits-item-text">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
+            <p class="benefits-item-text">Идейные соображения, а также начало повседневной работы по формированию
+              позиции.</p>
           </li>
           <li class="benefits-item">
             <h3 class="benefits-title">Пунктуальность</h3>
@@ -63,78 +72,78 @@
           </li>
           <li class="benefits-item">
             <h3 class="benefits-title">Современные технологии</h3>
-            <p class="benefits-item-text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
+            <p class="benefits-item-text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.
+            </p>
           </li>
         </ul>
-      </section>
-      <!--Род занятий-->
-      <section class="about">
+      </div>
+
+    </section>
+    <!--Род занятий-->
+    <section class="about">
+      <div class="container">
         <h2 class="about-title">Чем мы занимаемся</h2>
-        <img
-          src="./images/img(1).jpg"
-          alt="Программист, работающий в своем рабочем офисе"
-          width="370"
-          height="294"
-        />
-        <img
-          src="./images/img(2).jpg"
-          alt="Дизайнер разрабатывает приложение для смартфона"
-          width="370"
-          height="294"
-        />
-        <img
-          src="./images/img(3).jpg"
-          alt="Веб дизайнер подбирает цвет на планшете"
-          width="370"
-          height="294"
-        />
-      </section>
-      <!-- Наша команда -->
-      <section class="team">
+        <ul class="about-list list">
+          <li class="about-item"><img src="./images/img(1).jpg" alt="Программист, работающий в своем рабочем офисе"
+              width="370" height="294" /></li>
+          <li class="about-item"> <img src="./images/img(2).jpg" alt="Дизайнер разрабатывает приложение для смартфона"
+              width="370" height="294" /></li>
+          <li class="about-item"><img src="./images/img(3).jpg" alt="Веб дизайнер подбирает цвет на планшете"
+              width="370" height="294" /> </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Наша команда -->
+    <section class="team">
+      <div class="container">
         <h2 class="team-title">Наша команда</h2>
         <ul class="team-list list">
           <li class="team-item">
-            <img
-              src="./images/ProductDesigner.jpg"
-              alt="Игорь Демьяненко"
-              width="270"
-              height="260"
-            />
+            <img src="./images/ProductDesigner.jpg" alt="Игорь Демьяненко" width="270" height="260" />
             <h3 class="team-title-text">Игорь Демьяненко</h3>
             <p lang="en" class="team-item-text">Product Designer</p>
           </li>
-          <li  class="team-item">
+          <li class="team-item">
             <img src="./images/FrontendDeveloper.jpg" alt="Ольга Репина" width="270" height="260" />
             <h3 class="team-title-text">Ольга Репина</h3>
             <p lang="en" class="team-item-text">Frontend Develope</p>
           </li>
-          <li  class="team-item">
+          <li class="team-item">
             <img src="./images/Marketing.jpg" alt="Николай Тарасов" width="270" height="260" />
             <h3 class="team-title-text">Николай Тарасов</h3>
             <p lang="en" class="team-item-text">Marketing</p>
           </li>
-          <li  class="team-item">
+          <li class="team-item">
             <img src="./images/UIDesigner.jpg" alt="Михаил Ермаков" width="270" height="260" />
             <h3 class="team-title-text">Михаил Ермаков</h3>
             <p lang="en" class="team-item-text">UI Designer</p>
           </li>
         </ul>
-      </section>
-    </main>
-    <!-- Футер -->
-    <footer class="footer">
-      <a lang="en" class="footer-logo link" href="/"
-        ><span lang="en" class="footer-logo-accent">Web</span>Studio</a
-      >
+      </div>
+
+    </section>
+  </main>
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container footer-container">
       <address>
+        <a lang="en" class="footer-logo link" href="/"><span lang="en" class="footer-logo-accent">Web</span>Studio</a>
         <ul class="footer-list list">
           <!-- Ссылка на адрес -->
-          <li class="footer-item"><a class="footer-adress link" href="#">г. Киев, пр-т Леси Украинки, 26</a></li>
+          <li class="footer-item">
+            <a class="footer-adress link" href="#">г. Киев, пр-т Леси Украинки, 26</a>
+          </li>
           <!-- Ссылка на телефонный номер -->
-          <li class="footer-item"><a class="footer-tel link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+          <li class="footer-item">
+            <a class="footer-tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
           <!-- Ссылка на адрес электронной почты  -->
-          <li class="footer-item"><a class="footer-mailto link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+          <li class="footer-item">
+            <a class="footer-mailto link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
         </ul>
       </address>
-    </footer> 
+    </div>
+  </footer>
+
 </html>
