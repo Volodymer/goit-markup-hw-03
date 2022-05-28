@@ -13,10 +13,37 @@
   --heder-text-color: #212121;
   --footer-text-color: #ffffff;
 }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+}
 body {
   font-family: 'Roboto', sans-serif;
   color: #212121;
 }
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  outline: 1px solid red;
+}
+
 /* заберає підкреслення */
 .link {
   text-decoration: none;
@@ -43,6 +70,20 @@ body {
 .heder {
   background: var(--heder-babackground-color);
 }
+.heder-container {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid #ececec;
+}
+
+.heder-list {
+  display: flex;
+  align-items: center;
+}
+.heder-adres {
+  display: flex;
+}
 .heder-logo {
   font-family: 'Raleway';
   font-weight: 700;
@@ -50,16 +91,23 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #212121;
+  margin-right: 90px;
 }
 .heder-logo-accent {
   color: var(--accent-color);
 }
+.heder-item:not(:first-child) {
+  margin-left: 50px;
+}
+
 .heder-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--heder-text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .current {
   color: var(--accent-color);
@@ -67,6 +115,12 @@ body {
 .heder-link:hover,
 .heder-link:focus {
   color: var(--accent-color);
+}
+.heder-adres {
+  margin-left: auto;
+}
+.heder-tel {
+  margin-right: 50px;
 }
 .heder-tel,
 .heder-mailto {
@@ -85,17 +139,32 @@ body {
 /* -----------------------------------FOOTER-----------------------------------*/
 .footer {
   background-color: var(--footer-babackground-color);
+  height: 252px;
 }
+
+.footer-container {
+  height: 252px;
+}
+
 .footer-logo {
   font-family: 'Raleway';
+  font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #ffffff;
+  display: inline-block;
+  padding-top: 60px;
 }
 .footer-logo-accent {
   color: var(--accent-color);
+}
+.footer-list {
+  padding-top: 20px;
+}
+.footer-item:not(:first-child) {
+  padding-top: 9px;
 }
 .footer-adress {
   font-style: normal;
@@ -126,9 +195,13 @@ body {
 /* -----------------------------------HERO-----------------------------------*/
 
 .hero {
+  padding: 200px 0px;
+  text-align: center;
   background: var(--hero--babackground-color);
 }
+
 .hero-title {
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -138,18 +211,21 @@ body {
   color: #ffffff;
 }
 .hero-btn {
+  min-width: 200px;
+  padding: 10px 32px;
+  border-color: transparent;
+
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
   background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px rgba(107, 87, 87, 0.15);
   border-radius: 4px;
   cursor: pointer;
 }
@@ -163,6 +239,12 @@ body {
 .benefits {
   background: var(--main-babackground-color);
 }
+
+.benefits-list {
+  display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .benefits-title {
   font-weight: 700;
   font-size: 14px;
@@ -170,16 +252,30 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-title-color);
+  margin-bottom: 10px;
 }
+
 .benefits-item-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+  width: 270px;
 }
-/* -----------------------------------Abount-----------------------------------*/
-.abount {
+.benefits-item:not(:first-child) {
+  margin-left: 30px;
+}
+
+/* -----------------------------------Abont-----------------------------------*/
+.about {
   background: var(--main-babackground-color);
+}
+.about-list {
+  display: flex;
+  padding-bottom: 94px;
+}
+.about-item + .about-item {
+  margin-left: 30px;
 }
 .about-title {
   font-weight: 700;
@@ -188,10 +284,23 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-title-color);
+  margin-bottom: 50px;
 }
 /* -----------------------------------Team-----------------------------------*/
 .team {
   background-color: var(--second-babackground-color);
+}
+.team-list {
+  display: flex;
+  margin-left: -30px;
+}
+.team-item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  border: 1px, solid;
 }
 .team-title {
   font-weight: 700;
@@ -200,6 +309,11 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-title-color);
+  padding-top: 94px;
+  margin-bottom: 50px;
+}
+.team-list {
+  padding-bottom: 94px;
 }
 .team-title-text {
   font-weight: 500;
@@ -208,6 +322,8 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-title-color);
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 .team-item-text {
   font-size: 16px;
@@ -215,11 +331,37 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+  padding-bottom: 30px;
 }
 /* -----------------------------------Projects-----------------------------------*/
 .projects {
   background-color: var(--main-babackground-color);
 }
+.projects-list {
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 56px;
+  justify-content: center;
+}
+.projects-item + .projects-item {
+  margin-left: 8px;
+}
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+
+.portfolio-item {
+  background: #ffffff;
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+.portfolio-item:nth-last-child(-n + 3) {
+  margin-bottom: 94px;
+}
+
 .projects-btn {
   font-family: 'Roboto';
   font-style: normal;
@@ -232,6 +374,7 @@ body {
   background-color: var(--second-btr-color);
   border-radius: 4px;
   cursor: pointer;
+  padding: 6px 22px;
 }
 .projects-btn:hover,
 .projects-btn:focus {
@@ -248,16 +391,25 @@ body {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
+.portfolio-conteiner {
+  border: 1px solid #eeeeee;
+  border-top: 0px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
 .portfolio-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--main-title-color);
+  padding-top: 20px;
+  padding-bottom: 4px;
 }
 .portfolio-item-text {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+  padding-bottom: 20px;
 }
